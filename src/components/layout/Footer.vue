@@ -17,7 +17,8 @@ export default {
   line-height: 40px;
   box-shadow: 0px -2px 2px -2px #ccc;
   background-color: #fff;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #999;
   text-align: center;
+  bottom: 0;
 }
 </style>

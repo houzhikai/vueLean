@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '../views/home'
 // import Login from '../views/login'
-import testRouter from '@/components/testRouter'
 import OrderListAll from '../views/orderListAll'
 import OrderListPart from '../views/orderListPart'
 Vue.use(Router)
@@ -11,13 +10,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
+      redirect: '/home',
       component: Home
     },
     {
-      path: '/test',
-      name: 'test',
-      component: testRouter
+      path: '/home',
+      name: 'home',
+      component: Home
     },
     {
       path: '/orderListAll',

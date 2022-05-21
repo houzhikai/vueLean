@@ -13,17 +13,6 @@ export default {
     return {
       isCollapse: true
     }
-  },
-  methods: {
-    handleOpen (key, keyPath) {
-      console.log(key, keyPath)
-    },
-    handleClose (key, keyPath) {
-      console.log(key, keyPath)
-    },
-    toTest () {
-      this.$router.push('/test')
-    }
   }
 }
 </script>

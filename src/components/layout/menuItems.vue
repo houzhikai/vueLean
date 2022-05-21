@@ -1,5 +1,6 @@
 <template>
-  <el-submenu :index="value.code">
+<div>
+  <el-submenu v-if="value.children" :index="value.code">
     <template slot="title">
       <i :class="value.icon" />
       <span style="color: #fff">{{ value.description }}</span>
@@ -11,6 +12,11 @@
       <MenuItems v-if="!child.url && children.length > 0" :value="child" />
     </div>
   </el-submenu>
+  <el-menu-item v-else :index="value.code" @click="select(value)">
+  <i :class="value.icon" />
+    {{value.description}}
+  </el-menu-item>
+  </div>
 </template>
 <script>
 export default {
@@ -30,8 +36,10 @@ export default {
   },
   methods: {
     select (menu) {
-      console.log('menu', menu)
-      this.$router.push(menu.url)
+      const keyword = window.location.hash.substring(1)
+      if (keyword !== menu.url) {
+        this.$router.push(menu.url)
+      }
     }
   }
 }

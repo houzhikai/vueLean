@@ -1,6 +1,7 @@
 export default [
   {
     icon: 'el-icon-s-home',
+    url: '/home',
     description: '首页',
     code: 'home'
   },
