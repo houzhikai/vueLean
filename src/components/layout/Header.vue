@@ -11,9 +11,6 @@
 <script>
 export default {
   name: 'HeaderPage',
-  props () {
-    // isCollapse: Boolean;
-  },
   data () {
     return {
       // isCollapse: true,

@@ -5,7 +5,6 @@
 <script>
 export default {
   name: 'FooterPage',
-  props () {},
   data () {
     return {}
   }
