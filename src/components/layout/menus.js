@@ -6,13 +6,13 @@ export default [
     code: 'home'
   },
   {
-    icon: 'el-icon-share',
-    description: '我的页面',
+    icon: 'el-icon-loading',
+    description: '按钮',
     code: 'page',
     children: [
       {
-        url: '/orderListAll',
-        description: '全部订单'
+        url: '/myCopy',
+        description: '复制'
       },
       {
         url: '/orderListPart',

@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '../views/home'
 // import Login from '../views/login'
-import OrderListAll from '../views/orderListAll'
+import MyCopy from '../views/button/myCopy'
 import OrderListPart from '../views/orderListPart'
 Vue.use(Router)
 
@@ -19,9 +19,9 @@ export default new Router({
       component: Home
     },
     {
-      path: '/orderListAll',
-      name: 'orderListAll',
-      component: OrderListAll
+      path: '/myCopy',
+      name: 'myCopy',
+      component: MyCopy
     },
     {
       path: '/orderListPart',

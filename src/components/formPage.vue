@@ -1,7 +1,6 @@
 <template>
-  <div class="form">
-    <h4>{{title}}</h4>
-  </div>
+<!-- 样式组件 -->
+  <el-form class="form"></el-form>
 </template>
 
 <script>
@@ -13,7 +12,9 @@ export default {
 }
 </script>
 <style>
-h4{
-  margin: 0 8px 0;
+.form {
+  margin: 20px 8px;
+  background: white;
+  padding: 20px;
 }
 </style>

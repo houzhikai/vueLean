@@ -21,7 +21,7 @@
     </el-aside>
     <el-main>
       <Header @toggleCollapse="toggleCollapse" />
-      <div style="flex: 1; overflow-y: auto; padding: 20px;">
+      <div style="flex: 1; overflow-y: auto;  padding: 20px;">
       <transition name="fade-transform" mode="out-in" >
         <keep-alive :exclude="noCaches">
           <router-view :key="key" />
@@ -42,7 +42,7 @@ export default {
   components: { MenuItems, Header, Footer },
   data () {
     return {
-      isCollapse: true,
+      isCollapse: false,
       noCaches: [],
       menus
     }
