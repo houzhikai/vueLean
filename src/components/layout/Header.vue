@@ -1,19 +1,29 @@
 <template>
   <div class="wrapper">
-    <!-- <el-radio-group v-model="isCollapse">
-      <el-radio-button :label="false">展开</el-radio-button>
-      <el-radio-button :label="true">收起</el-radio-button>
-    </el-radio-group> -->
-    我是顶部栏，内容可以填充。
+    <div>
+        <i class="el-icon-s-fold" v-if="isCollapse" @click="toggleMenu(true)" style="font-size: 40px;cursor: pointer;" />
+        <i class="el-icon-s-unfold" v-else  @click="toggleMenu(false)" style="font-size: 40px;cursor: pointer;" />
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'HeaderPage',
+  props: {
+    isCollapse: Boolean
+  },
   data () {
     return {
-      // isCollapse: true,
+      // isCollapse: true
+    }
+  },
+  methods: {
+    toggleMenu (value) {
+      this.$emit('toggleCollapse', value)
+      setTimeout(() => {
+        this.isCollapse = !this.isCollapse
+      }, 200)
     }
   }
 }

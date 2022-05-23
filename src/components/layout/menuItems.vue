@@ -12,8 +12,9 @@
       <MenuItems v-if="!child.url && children.length > 0" :value="child" />
     </div>
   </el-submenu>
+
   <el-menu-item v-else :index="value.code" @click="select(value)">
-  <i :class="value.icon" />
+  <i v-if="value.icon" :class="value.icon" />
     {{value.description}}
   </el-menu-item>
   </div>

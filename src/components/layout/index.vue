@@ -7,6 +7,7 @@
         text-color="#a6aaae"
         :unique-opened="true"
         style="height: 100vh; width: 200px"
+        :collapse="isCollapse"
       >
         <div class="project">
           <i
@@ -19,7 +20,7 @@
       </el-menu>
     </el-aside>
     <el-main>
-      <Header @isCollapse="toggleCollapse" />
+      <Header @toggleCollapse="toggleCollapse" />
       <div style="flex: 1; overflow-y: auto; padding: 20px;">
       <transition name="fade-transform" mode="out-in" >
         <keep-alive :exclude="noCaches">
@@ -52,8 +53,8 @@ export default {
     }
   },
   methods: {
-    toggleCollapse () {
-      return !this.isCollapse
+    toggleCollapse (value) {
+      this.isCollapse = value
     }
   }
 }
