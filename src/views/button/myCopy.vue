@@ -3,7 +3,7 @@
     <Breadcrumb :list="list" />
     <el-form class="formPage">
       <el-form-item label="11">
-        <Copy label="1111112221" />
+        <Copy :disabled="true" label="1111112221" />
       </el-form-item>
       <el-form-item label="不提示">
         <Copy :disabled="true"
