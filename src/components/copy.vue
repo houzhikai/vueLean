@@ -36,10 +36,13 @@ export default {
   }
 }
 </script>
-
-<style>
+<style lang="scss" scoped>
 .btn {
   color: #409eff;
+  &:hover::after{
+    content: '复制';
+
+  }
 }
 .content {
   display: inline-block;
